@@ -22,7 +22,7 @@ contactForm.addEventListener('submit', async function (event) {
     // Define your backend API endpoint URL
     // IMPORTANT: Replace 'http://localhost:3000' with your deployed backend URL
     // once you host it (e.g., 'https://your-backend-app.render.com/submit-form')
-    const backendUrl = 'https://my-web-backend-app-8701ad26c7c7.herokuapp.com/submit-form'; // For local testing
+    const backendUrl = 'https://my-website-app-b65f5791952a.herokuapp.com/submit-form'; // For local testing
 
     try {
         const response = await fetch(backendUrl, {
