@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Website with Backend Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <p>This is your first simple website, created with VS Code and hosted on GitHub.</p>
+
+        <h2>Submit Your Information</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="userName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Info (Email/Phone):</label>
+                <input type="text" id="contact" name="userContact" placeholder="Enter your email or phone number"
+                    required>
+            </div>
+            <button type="submit">Submit Information</button>
+        </form>
+        <div id="formMessage"></div>
+
+        <div class="schedule-button-container">
+            <p>Ready to connect? Schedule a meeting directly on my calendar!</p>
+            <a href="https://calendly.com/saralakorem/30min" target="_blank" class="schedule-button">
+                Schedule a Meeting
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
