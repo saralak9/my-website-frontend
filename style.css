@@ -95,12 +95,76 @@ body {
 }
 
 /* Specific button variations */
-.button-header {
-    padding: 10px 25px;
-    /* Slightly smaller for header */
-    font-size: 0.95em;
-    border-radius: 8px;
+/* Adjusted styles for the Contact Us button */
+.button-contact-us {
+    align-items: center;
+    appearance: none;
+    background-color: #203864;
+    /* Use your dark blue */
+    border: 1px solid #203864;
+    /* Border matches background for solid look */
+    border-radius: .375em;
+    /* From button-60 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Keep consistent shadow */
+    box-sizing: border-box;
+    color: #fff;
+    /* White text */
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    /* Use your site's font */
+    font-size: 0.9em;
+    /* **Smaller font size** */
+    /* Removed height: 2.5em; to allow natural sizing based on padding */
+    justify-content: center;
+    line-height: 1.5;
+    /* From button-60 */
+    padding: 0.6em 1.2em;
+    /* **Adjusted padding to make it smaller** */
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    /* Add border-color transition */
+    letter-spacing: 0.5px;
+    /* Keep consistent letter spacing */
 }
+
+.button-contact-us:active {
+    border-color: #1a2f52;
+    /* Darker blue on active */
+    background-color: #1a2f52;
+    outline: 0;
+}
+
+.button-contact-us:focus {
+    border-color: #EE502C;
+    /* Use orange for focus outline */
+    outline: 0;
+    box-shadow: rgba(238, 80, 44, .4) 0 0 0 .125em;
+    /* Orange focus shadow */
+}
+
+.button-contact-us:hover {
+    background-color: #1a2f52;
+    /* Darker blue on hover */
+    border-color: #1a2f52;
+    /* Border matches background on hover */
+    transform: translateY(-2px);
+    /* Slight lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.button-contact-us:focus:not(:active) {
+    box-shadow: rgba(238, 80, 44, .4) 0 0 0 .125em;
+    /* Orange focus shadow */
+}
+
 
 .button-primary {
     /* For "Get Started Now" in Hero */
@@ -505,8 +569,8 @@ input[type="email"]:focus {
         /* Adjust logo size for smaller screens */
     }
 
-    /* Removed .header-tagline responsive style */
-    .button-header {
+    .button-contact-us {
+        /* Responsive style for the new button */
         padding: 8px 20px;
         font-size: 0.9em;
     }
@@ -598,11 +662,10 @@ input[type="email"]:focus {
     .logo {
         height: 40px;
         /* Adjust logo size for smaller screens */
-        /* No margin-right needed */
     }
 
-    /* Removed .header-tagline responsive style */
-    .button-header {
+    .button-contact-us {
+        /* Responsive style for the new button */
         padding: 7px 15px;
         font-size: 0.85em;
     }
@@ -721,7 +784,8 @@ input[type="email"]:focus {
         text-align: center;
     }
 
-    .button-header {
+    .button-contact-us {
+        /* Responsive style for the new button */
         width: 100%;
         padding: 10px;
     }
@@ -730,7 +794,6 @@ input[type="email"]:focus {
         height: 35px;
     }
 
-    /* Removed .header-tagline responsive style */
     .hero-section {
         padding: 80px 0 40px;
     }
