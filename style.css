@@ -56,26 +56,10 @@ body {
 .logo {
     height: 65px;
     /* Larger logo */
-    margin-right: 15px;
-    /* Space between logo and tagline */
+    /* No margin-right needed if tagline is removed */
 }
 
-/* Removed .company-info and .company-name styles as they are no longer used */
-
-.header-tagline {
-    /* New class for tagline in header */
-    font-family: 'Dancing Script', cursive;
-    /* Flowing script font */
-    font-size: 1.5em;
-    /* Slightly smaller, adjusted for script font readability */
-    color: #555;
-    /* Softer grey for tagline */
-    font-weight: 400;
-    /* Regular weight for script font */
-    font-style: italic;
-    /* Explicitly italic */
-    /* No margin-left needed here, margin-right on logo handles spacing */
-}
+/* Removed .company-info, .company-name, and .header-tagline styles */
 
 /* --- General Button Styling (all buttons will inherit these) --- */
 .button {
@@ -521,10 +505,7 @@ input[type="email"]:focus {
         /* Adjust logo size for smaller screens */
     }
 
-    .header-tagline {
-        font-size: 1.1em;
-    }
-
+    /* Removed .header-tagline responsive style */
     .button-header {
         padding: 8px 20px;
         font-size: 0.9em;
@@ -617,13 +598,10 @@ input[type="email"]:focus {
     .logo {
         height: 40px;
         /* Adjust logo size for smaller screens */
-        margin-right: 10px;
+        /* No margin-right needed */
     }
 
-    .header-tagline {
-        font-size: 0.9em;
-    }
-
+    /* Removed .header-tagline responsive style */
     .button-header {
         padding: 7px 15px;
         font-size: 0.85em;
@@ -752,10 +730,7 @@ input[type="email"]:focus {
         height: 35px;
     }
 
-    .header-tagline {
-        font-size: 0.8em;
-    }
-
+    /* Removed .header-tagline responsive style */
     .hero-section {
         padding: 80px 0 40px;
     }
