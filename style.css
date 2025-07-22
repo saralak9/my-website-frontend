@@ -53,8 +53,8 @@ body {
 }
 
 .logo {
-    height: 40px;
-    /* Slightly smaller logo for better balance in header */
+    height: 50px;
+    /* Increased logo size */
     margin-right: 15px;
 }
 
@@ -67,8 +67,8 @@ body {
 
 .company-name {
     font-family: 'Inter', sans-serif;
-    font-size: 1.5em;
-    /* Adjusted font size */
+    font-size: 1.6em;
+    /* Adjusted font size for prominence */
     font-weight: 700;
     /* Bold font weight */
     color: #203864;
@@ -79,10 +79,10 @@ body {
 
 .tagline {
     font-family: 'Inter', sans-serif;
-    font-size: 0.8em;
-    /* Smaller font size for the tagline */
-    color: #666;
-    /* Softer grey for tagline */
+    font-size: 0.85em;
+    /* Adjusted tagline font size */
+    color: #444;
+    /* Darker grey for better readability */
     margin-top: 2px;
     /* Reduced space for tighter grouping */
 }
@@ -91,18 +91,18 @@ body {
     /* Styles for the right side of the header */
 }
 
-/* Contact Us Button Styles - Using logo's red/orange */
+/* Contact Us Button Styles - Using logo's dark blue */
 .contact-button {
-    background-color: #EE502C;
-    /* Using logo's red/orange */
+    background-color: #203864;
+    /* Using logo's dark blue */
     color: white;
-    padding: 10px 22px;
-    /* Slightly adjusted padding */
+    padding: 10px 25px;
+    /* More padding for a better feel */
     border: none;
     border-radius: 6px;
     /* Slightly less rounded for a crisp look */
     cursor: pointer;
-    font-size: 0.95em;
+    font-size: 1em;
     /* Readable font size */
     font-weight: bold;
     text-decoration: none;
@@ -112,8 +112,8 @@ body {
 }
 
 .contact-button:hover {
-    background-color: #D64525;
-    /* Darker red/orange on hover */
+    background-color: #1a2f52;
+    /* Slightly darker blue on hover */
     transform: translateY(-1px);
     /* Slight lift effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -219,9 +219,10 @@ input[type="email"]:focus {
     /* Subtle focus ring */
 }
 
+/* Submit Button Styles - Using logo's dark blue */
 button[type="submit"] {
-    background-color: #EE502C;
-    /* Using logo's red/orange for submit button */
+    background-color: #203864;
+    /* Using logo's dark blue */
     color: white;
     padding: 14px 30px;
     /* Larger padding for a more prominent button */
@@ -238,8 +239,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #D64525;
-    /* Darker red/orange on hover */
+    background-color: #1a2f52;
+    /* Darker blue on hover */
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     /* More pronounced shadow on hover */
@@ -280,9 +281,10 @@ button[type="submit"]:hover {
     /* Space between text and button */
 }
 
+/* Schedule Button Styles - Using logo's dark blue */
 .schedule-button {
-    background-color: #EE502C;
-    /* Using logo's red/orange for schedule button */
+    background-color: #203864;
+    /* Using logo's dark blue for schedule button */
     color: white;
     padding: 16px 35px;
     /* Larger padding for a more prominent button */
@@ -299,26 +301,34 @@ button[type="submit"]:hover {
 }
 
 .schedule-button:hover {
-    background-color: #D64525;
-    /* Darker red/orange on hover */
+    background-color: #1a2f52;
+    /* Darker blue on hover */
     transform: translateY(-3px);
     /* More pronounced lift effect */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     /* Even more pronounced shadow on hover */
 }
 
-/* Basic Responsiveness (Optional, but good practice) */
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .container {
+        max-width: 700px;
+        padding: 40px 50px;
+    }
+}
+
 @media (max-width: 768px) {
     .main-header {
         padding: 10px 20px;
     }
 
     .logo {
-        height: 35px;
+        height: 40px;
+        /* Adjust logo size for smaller screens */
     }
 
     .company-name {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .tagline {
@@ -333,6 +343,8 @@ button[type="submit"]:hover {
     .container {
         padding: 30px 30px;
         width: 95%;
+        margin-top: 20px;
+        /* Reduce margin for tighter fit */
     }
 
     h1 {
@@ -347,9 +359,68 @@ button[type="submit"]:hover {
         font-size: 1em;
     }
 
+    label {
+        font-size: 0.9em;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+        padding: 10px;
+    }
+
     button[type="submit"],
     .schedule-button {
         padding: 12px 25px;
         font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        /* Stack logo/name and button on very small screens */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        width: 100%;
+        text-align: center;
+        /* Center button if it takes full width */
+    }
+
+    .contact-button {
+        width: 100%;
+        /* Make button full width */
+        padding: 10px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .company-name {
+        font-size: 1.1em;
+    }
+
+    .tagline {
+        font-size: 0.7em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 }
