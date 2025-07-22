@@ -1,31 +1,45 @@
+/* Universal Box-Sizing for consistent padding/borders */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
-    /* Changed to column to stack header and container */
+    /* Stack header and main content vertically */
     justify-content: flex-start;
     /* Align items to the start of the cross axis */
     align-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: #f0f2f5;
+    /* Light grey background */
     color: #333;
-    padding-top: 80px;
-    /* Ensure this is greater than your header's height */
+    /* Default text color */
+    padding-top: 90px;
+    /* Adjust this value if header height changes */
 }
 
 /* Header Styles - Refined for professional look with logo colors */
 .main-header {
     width: 100%;
     background-color: #ffffff;
-    padding: 12px 40px;
-    /* Increased horizontal padding for better spacing */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    /* More pronounced shadow */
+    padding: 15px 40px;
+    /* Increased padding for more breathing room */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    /* Slightly softer shadow */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    /* Ensures header is on top */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,34 +53,37 @@ body {
 }
 
 .logo {
-    height: 45px;
-    /* Slightly adjusted logo size for balance */
+    height: 40px;
+    /* Slightly smaller logo for better balance in header */
     margin-right: 15px;
 }
 
 .company-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* Vertically center content if needed */
 }
 
 .company-name {
     font-family: 'Inter', sans-serif;
-    font-size: 1.6em;
-    /* Slightly adjusted font size */
+    font-size: 1.5em;
+    /* Adjusted font size */
     font-weight: 700;
-    /* Bold font weight for prominence */
+    /* Bold font weight */
     color: #203864;
     /* Using logo's dark blue */
     line-height: 1.2;
+    /* Tighter line height */
 }
 
 .tagline {
     font-family: 'Inter', sans-serif;
-    font-size: 0.85em;
-    /* Adjusted tagline font size */
+    font-size: 0.8em;
+    /* Smaller font size for the tagline */
     color: #666;
-    /* Keeping a softer grey for tagline, can be adjusted to a lighter blue if preferred */
-    margin-top: 3px;
+    /* Softer grey for tagline */
+    margin-top: 2px;
     /* Reduced space for tighter grouping */
 }
 
@@ -79,53 +96,82 @@ body {
     background-color: #EE502C;
     /* Using logo's red/orange */
     color: white;
-    padding: 10px 20px;
+    padding: 10px 22px;
+    /* Slightly adjusted padding */
     border: none;
-    border-radius: 8px;
-    /* Slightly rounded corners */
+    border-radius: 6px;
+    /* Slightly less rounded for a crisp look */
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.95em;
     /* Readable font size */
     font-weight: bold;
     text-decoration: none;
-    /* Remove underline for links */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
 }
 
 .contact-button:hover {
     background-color: #D64525;
-    /* Slightly darker red/orange on hover */
+    /* Darker red/orange on hover */
     transform: translateY(-1px);
     /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* More pronounced shadow on hover */
 }
 
-
+/* Main Container */
 .container {
     background-color: #ffffff;
-    padding: 40px 60px;
+    padding: 50px 70px;
+    /* Increased padding inside container */
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    /* Deeper shadow for main content */
     text-align: center;
-    max-width: 90%;
+    max-width: 800px;
+    /* Limiting max-width for better readability on large screens */
+    width: 90%;
+    /* Responsive width */
     box-sizing: border-box;
-    margin-top: 20px;
-    /* Add margin to push content below the fixed header */
+    margin-top: 30px;
+    /* Space between header and container */
+    margin-bottom: 50px;
+    /* Space at the bottom */
 }
 
 h1 {
     color: #203864;
     /* Using logo's dark blue for main heading */
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    font-size: 3.2em;
+    /* Slightly larger main heading */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.03);
+    /* Lighter text shadow */
+    font-weight: 700;
+    /* Ensure it's bold */
 }
 
 p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.1em;
+    /* Slightly smaller paragraph font */
+    line-height: 1.7;
+    /* Improved line height for readability */
     margin-bottom: 30px;
+    color: #444;
+    /* Slightly darker grey for body text */
+}
+
+h2 {
+    color: #203864;
+    /* Using logo's dark blue for sub-headings */
+    font-size: 2em;
+    /* Good size for sub-heading */
+    margin-top: 40px;
+    /* More space above sub-heading */
+    margin-bottom: 25px;
+    font-weight: 600;
+    /* Semi-bold */
 }
 
 form {
@@ -134,26 +180,33 @@ form {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    /* Increased space between form groups */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    /* More space between label and input */
     font-weight: bold;
-    color: #555;
+    color: #444;
+    /* Darker label color */
+    font-size: 1em;
 }
 
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
-    width: calc(100% - 20px);
-    padding: 10px;
+    width: 100%;
+    /* Make inputs fill available width */
+    padding: 12px;
+    /* Increased padding in inputs */
     border: 1px solid #ddd;
     border-radius: 8px;
+    /* Consistent border-radius */
     font-size: 1em;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -162,40 +215,48 @@ input[type="email"]:focus {
     border-color: #EE502C;
     /* Using logo's red/orange for input focus */
     outline: none;
+    box-shadow: 0 0 0 3px rgba(238, 80, 44, 0.2);
+    /* Subtle focus ring */
 }
 
 button[type="submit"] {
     background-color: #EE502C;
     /* Using logo's red/orange for submit button */
     color: white;
-    padding: 12px 25px;
+    padding: 14px 30px;
+    /* Larger padding for a more prominent button */
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
+    /* More space above button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Consistent button shadow */
 }
 
 button[type="submit"]:hover {
     background-color: #D64525;
     /* Darker red/orange on hover */
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow on hover */
 }
 
 #formMessage {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 25px;
+    /* More space above message */
+    padding: 12px;
     border-radius: 8px;
     font-weight: bold;
     display: none;
-    /* Hidden by default */
+    font-size: 0.95em;
 }
 
 #formMessage.success {
     background-color: #e6ffe6;
-    /* Keep green for success, as it's a common indicator */
     color: #4CAF50;
     border: 1px solid #4CAF50;
 }
@@ -206,17 +267,25 @@ button[type="submit"]:hover {
     border: 1px solid #f44336;
 }
 
-/* NEW STYLES FOR SCHEDULING BUTTON - Updated with red/orange */
+/* Schedule Button Section */
 .schedule-button-container {
-    margin-top: 40px;
+    margin-top: 50px;
+    /* More space above the scheduling section */
     text-align: center;
+}
+
+.schedule-button-container p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    /* Space between text and button */
 }
 
 .schedule-button {
     background-color: #EE502C;
     /* Using logo's red/orange for schedule button */
     color: white;
-    padding: 15px 30px;
+    padding: 16px 35px;
+    /* Larger padding for a more prominent button */
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -224,12 +293,63 @@ button[type="submit"]:hover {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    /* More pronounced shadow for schedule button */
 }
 
 .schedule-button:hover {
     background-color: #D64525;
     /* Darker red/orange on hover */
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    /* More pronounced lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    /* Even more pronounced shadow on hover */
+}
+
+/* Basic Responsiveness (Optional, but good practice) */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .company-name {
+        font-size: 1.3em;
+    }
+
+    .tagline {
+        font-size: 0.75em;
+    }
+
+    .contact-button {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+
+    .container {
+        padding: 30px 30px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button[type="submit"],
+    .schedule-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
 }
