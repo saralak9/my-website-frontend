@@ -54,40 +54,29 @@ body {
 }
 
 .logo {
-    height: 60px;
-    /* Larger logo */
-    margin-right: 18px;
-    /* More space */
+    height: 65px;
+    /* Even larger logo */
+    margin-right: 15px;
+    /* Space between logo and tagline */
 }
 
 .company-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* This div is now effectively empty in HTML, but keeping for structure if needed later */
+    display: none;
+    /* Hide if not used, or remove from HTML */
 }
 
-.company-name {
+.header-tagline {
+    /* New class for tagline in header */
     font-family: 'Poppins', sans-serif;
-    font-size: 2em;
-    /* Larger company name */
-    font-weight: 700;
-    color: #203864;
-    /* Logo's dark blue */
-    line-height: 1;
-    /* Tighter line height */
-    letter-spacing: -0.8px;
-    /* More prominent letter spacing adjustment */
-}
-
-.tagline {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-    /* Larger tagline */
-    color: #6c757d;
+    font-size: 1.2em;
+    /* Larger tagline font size */
+    color: #555;
     /* Softer grey for tagline */
-    margin-top: 5px;
-    /* More space */
-    font-weight: 400;
+    font-weight: 500;
+    /* Medium weight */
+    margin-left: 5px;
+    /* Small space if needed, though margin-right on logo handles it */
 }
 
 /* --- General Button Styling (all buttons will inherit these) --- */
@@ -196,6 +185,7 @@ main {
     /* Larger section titles */
     font-weight: 700;
     color: #203864;
+    /* Logo's dark blue */
     margin-bottom: 20px;
     letter-spacing: -1px;
 }
@@ -403,6 +393,20 @@ input[type="email"]:focus {
     /* More prominent focus ring */
 }
 
+/* Submit Button & Schedule Button (use general .button class) */
+.button-submit,
+.button-schedule {
+    margin-top: 30px;
+    /* Space above form buttons */
+    width: auto;
+    /* Allow buttons to size to content */
+    padding: 16px 40px;
+    /* Larger padding for these main action buttons */
+    font-size: 1.15em;
+    border-radius: 12px;
+    /* Slightly more rounded */
+}
+
 .form-message {
     margin-top: 30px;
     padding: 18px;
@@ -515,15 +519,12 @@ input[type="email"]:focus {
     }
 
     .logo {
-        height: 50px;
+        height: 55px;
+        /* Adjust logo size for smaller screens */
     }
 
-    .company-name {
-        font-size: 1.6em;
-    }
-
-    .tagline {
-        font-size: 0.9em;
+    .header-tagline {
+        font-size: 1.1em;
     }
 
     .button-header {
@@ -616,17 +617,13 @@ input[type="email"]:focus {
     }
 
     .logo {
-        height: 45px;
+        height: 40px;
+        /* Adjust logo size for smaller screens */
         margin-right: 10px;
     }
 
-    .company-name {
-        font-size: 1.4em;
-        letter-spacing: -0.5px;
-    }
-
-    .tagline {
-        font-size: 0.8em;
+    .header-tagline {
+        font-size: 0.9em;
     }
 
     .button-header {
@@ -663,6 +660,11 @@ input[type="email"]:focus {
     .section-description {
         font-size: 1em;
         margin-bottom: 30px;
+    }
+
+    .container {
+        padding: 0 15px;
+        width: 95%;
     }
 
     .features-grid,
@@ -749,15 +751,11 @@ input[type="email"]:focus {
     }
 
     .logo {
-        height: 40px;
+        height: 35px;
     }
 
-    .company-name {
-        font-size: 1.1em;
-    }
-
-    .tagline {
-        font-size: 0.7em;
+    .header-tagline {
+        font-size: 0.8em;
     }
 
     .hero-section {
@@ -825,14 +823,6 @@ input[type="email"]:focus {
     .button-submit,
     .button-schedule {
         padding: 10px 20px;
-        font-size: 0.9em;
-    }
-
-    .faq-question {
-        font-size: 1em;
-    }
-
-    .faq-answer {
         font-size: 0.9em;
     }
 }
