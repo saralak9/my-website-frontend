@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KP Visa Services - Your Gateway to Global Visas</title>
+    <title>KP Visa Services - Your Global Visa Partner</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Poppins for headings, Inter for body text -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -21,81 +22,89 @@
             </div>
         </div>
         <div class="header-right">
-            <a href="#contact-section" class="contact-button">Contact Us</a>
+            <a href="#contact-section" class="button button-header">Contact Us</a>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero-section">
-            <div class="hero-content">
-                <h1>Your Journey Starts Here.<br>Fast, Easy, Reliable Visas.</h1>
-                <p>Unlock global opportunities with seamless visa application services. We handle the complexities so
-                    you can focus on your destination.</p>
-                <a href="#contact-section" class="button primary-button">Get Started Now</a>
+            <div class="hero-content-wrapper">
+                <h1 class="hero-title">Your Journey Starts Here.<br>Fast, Easy, Reliable Visas.</h1>
+                <p class="hero-description">Unlock global opportunities with seamless visa application services. We
+                    handle the complexities so you can focus on your destination.</p>
+                <a href="#contact-section" class="button button-primary">Get Started Now</a>
             </div>
         </section>
 
-        <section class="info-section features-section">
+        <!-- Features/Why Choose Us Section -->
+        <section class="section features-section">
             <div class="container">
-                <h2>Why Choose KP Visa Services?</h2>
+                <h2 class="section-title">Why Choose KP Visa Services?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <h3>Expert Guidance</h3>
-                        <p>Our experienced team provides personalized assistance, ensuring accuracy and compliance for
-                            every application.</p>
+                        <h3 class="card-title">Expert Guidance</h3>
+                        <p class="card-description">Our experienced team provides personalized assistance, ensuring
+                            accuracy and compliance for every application.</p>
                     </div>
                     <div class="feature-card">
-                        <h3>Timely Processing</h3>
-                        <p>We streamline the application process to help you get your visa approved as quickly as
-                            possible.</p>
+                        <h3 class="card-title">Timely Processing</h3>
+                        <p class="card-description">We streamline the application process to help you get your visa
+                            approved as quickly as possible.</p>
                     </div>
                     <div class="feature-card">
-                        <h3>Transparent Process</h3>
-                        <p>Stay informed at every step with clear communication and real-time updates on your
-                            application status.</p>
+                        <h3 class="card-title">Transparent Process</h3>
+                        <p class="card-description">Stay informed at every step with clear communication and real-time
+                            updates on your application status.</p>
                     </div>
                     <div class="feature-card">
-                        <h3>Customer Support</h3>
-                        <p>Dedicated support is available to answer all your queries and provide assistance whenever you
-                            need it.</p>
+                        <h3 class="card-title">Dedicated Support</h3>
+                        <p class="card-description">Our team is always ready to answer your questions and provide
+                            assistance whenever you need it.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="info-section how-it-works-section">
+        <!-- How It Works Section -->
+        <section class="section how-it-works-section">
             <div class="container">
-                <h2>Our Simple Process</h2>
+                <h2 class="section-title">Our Simple Process</h2>
                 <div class="process-steps">
                     <div class="step-card">
                         <span class="step-number">1</span>
-                        <h3>Apply Online</h3>
-                        <p>Fill out our simple online form with your details and visa requirements.</p>
+                        <h3 class="card-title">Apply Online</h3>
+                        <p class="card-description">Fill out our simple online form with your details and visa
+                            requirements.</p>
                     </div>
                     <div class="step-card">
                         <span class="step-number">2</span>
-                        <h3>Document Submission</h3>
-                        <p>Securely upload your necessary documents. We'll review them for perfection.</p>
+                        <h3 class="card-title">Document Submission</h3>
+                        <p class="card-description">Securely upload your necessary documents. We'll review them for
+                            perfection.</p>
                     </div>
                     <div class="step-card">
                         <span class="step-number">3</span>
-                        <h3>Visa Processing</h3>
-                        <p>Our experts handle the submission and liaise with authorities for swift processing.</p>
+                        <h3 class="card-title">Visa Processing</h3>
+                        <p class="card-description">Our experts handle the submission and liaise with authorities for
+                            swift processing.</p>
                     </div>
                     <div class="step-card">
                         <span class="step-number">4</span>
-                        <h3>Visa Approval</h3>
-                        <p>Receive your approved visa, ready for your next adventure!</p>
+                        <h3 class="card-title">Visa Approval</h3>
+                        <p class="card-description">Receive your approved visa, ready for your next adventure!</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact-section" class="info-section contact-form-section">
+        <!-- Contact/Form Section -->
+        <section id="contact-section" class="section contact-form-section">
             <div class="container">
-                <h2>Get in Touch with Us</h2>
-                <p>Have questions or need assistance? Fill out the form below and we'll get back to you shortly.</p>
-                <form id="contactForm">
+                <h2 class="section-title">Get in Touch with Us</h2>
+                <p class="section-description">Have questions or need assistance? Fill out the form below and we'll get
+                    back to you shortly.</p>
+                <form id="contactForm" class="contact-form">
                     <div class="form-group">
                         <label for="name">Your Name:</label>
                         <input type="text" id="name" name="userName" placeholder="Enter your full name" required>
@@ -105,43 +114,46 @@
                         <input type="text" id="contact" name="userContact"
                             placeholder="Enter your email or phone number" required>
                     </div>
-                    <button type="submit" class="button submit-button">Submit Information</button>
+                    <button type="submit" class="button button-submit">Submit Information</button>
                 </form>
-                <div id="formMessage"></div>
+                <div id="formMessage" class="form-message"></div>
 
                 <div class="schedule-button-container">
-                    <p>Prefer to chat? Schedule a meeting directly on our calendar!</p>
-                    <a href="https://calendly.com/saralakorem/30min" target="_blank" class="button schedule-button">
+                    <p class="section-description">Prefer to chat? Schedule a meeting directly on our calendar!</p>
+                    <a href="https://calendly.com/saralakorem/30min" target="_blank" class="button button-schedule">
                         Schedule a Meeting
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="info-section faq-section">
+        <!-- FAQ Section -->
+        <section class="section faq-section">
             <div class="container">
-                <h2>Frequently Asked Questions</h2>
+                <h2 class="section-title">Frequently Asked Questions</h2>
                 <div class="faq-list">
                     <div class="faq-item">
-                        <h3>What documents do I need for a visa application?</h3>
-                        <p>Required documents vary by destination and visa type. Generally, a valid passport, photos,
-                            application form, and supporting financial/travel documents are needed. We provide a
-                            detailed list for your specific case.</p>
+                        <h3 class="faq-question">What documents do I need for a visa application?</h3>
+                        <p class="faq-answer">Required documents vary by destination and visa type. Generally, a valid
+                            passport, photos, application form, and supporting financial/travel documents are needed. We
+                            provide a detailed list for your specific case.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>How long does the visa application process take?</h3>
-                        <p>Processing times depend on the embassy/consulate, visa type, and your nationality. We strive
-                            to expedite the process and will provide an estimated timeline upon consultation.</p>
+                        <h3 class="faq-question">How long does the visa application process take?</h3>
+                        <p class="faq-answer">Processing times depend on the embassy/consulate, visa type, and your
+                            nationality. We strive to expedite the process and will provide an estimated timeline upon
+                            consultation.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>Can I track my visa application status?</h3>
-                        <p>Yes, we provide updates on your application status. Our team will keep you informed at every
-                            major milestone.</p>
+                        <h3 class="faq-question">Can I track my visa application status?</h3>
+                        <p class="faq-answer">Yes, we provide updates on your application status. Our team will keep you
+                            informed at every major milestone.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>What if my visa application is denied?</h3>
-                        <p>While we aim for 100% success, in rare cases of denial, we will guide you through the next
-                            steps, including options for reapplication or appeal, based on the embassy's feedback.</p>
+                        <h3 class="faq-question">What if my visa application is denied?</h3>
+                        <p class="faq-answer">While we aim for 100% success, in rare cases of denial, we will guide you
+                            through the next steps, including options for reapplication or appeal, based on the
+                            embassy's feedback.</p>
                     </div>
                 </div>
             </div>
